@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4506501016851960}
   - component: {fileID: 212641857896524198}
-  - component: {fileID: 95355115508330128}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -36,6 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4571173546679472}
+  - component: {fileID: 95680949790614858}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -62,7 +62,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354376910628090}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -70,13 +70,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95355115508330128
+--- !u!95 &95680949790614858
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1078195521557428}
+  m_GameObject: {fileID: 1354376910628090}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 71534da10c851384d9ebbf9087a687ee, type: 2}
