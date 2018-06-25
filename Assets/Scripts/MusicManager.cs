@@ -16,6 +16,7 @@ public class MusicManager : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefsManager.MasterVolume;
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 

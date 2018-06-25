@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public bool AutoLoadNextLevelEnabled;
+    [Range(0f, 20f)]
     public float AutoLoadDelay;
 
     private void Start() 
