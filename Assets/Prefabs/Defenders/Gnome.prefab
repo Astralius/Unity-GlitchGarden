@@ -20,6 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4548230499067768}
   - component: {fileID: 95498851655457722}
+  - component: {fileID: 70990711302793334}
+  - component: {fileID: 114055944598283728}
+  - component: {fileID: 114578525573210246}
+  - component: {fileID: 114000012479985316}
   m_Layer: 0
   m_Name: Gnome
   m_TagString: Untagged
@@ -70,6 +74,21 @@ Transform:
   m_Father: {fileID: 4548230499067768}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &70990711302793334
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306559212555940}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.009839535, y: -0.03}
+  m_Size: {x: 0.35, y: 0.8}
+  m_Direction: 0
 --- !u!95 &95498851655457722
 Animator:
   serializedVersion: 3
@@ -88,6 +107,41 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114000012479985316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306559212555940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7aa5eea08b17c408147c1af5028d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114055944598283728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306559212555940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93674d41b0cb8374a9a37066663ad7bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114578525573210246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306559212555940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a8c2ef22c8aa84db2eae8d1c9f382b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingHealth: 10
+  CurrentHealth: 0
 --- !u!212 &212115129575884174
 SpriteRenderer:
   m_ObjectHideFlags: 1
