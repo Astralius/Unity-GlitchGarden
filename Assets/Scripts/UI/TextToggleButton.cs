@@ -14,7 +14,7 @@ namespace UnityEngine.UI
         private Text[] texts;
         [Space]
         [SerializeField]
-        private Button.ButtonClickedEvent onClick = new Button.ButtonClickedEvent();
+        //private Button.ButtonClickedEvent onClick = new Button.ButtonClickedEvent();
 
         private int currentTextIndex;
 

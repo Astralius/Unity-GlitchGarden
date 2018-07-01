@@ -30,7 +30,7 @@ public class OptionsController : MonoBehaviour
             var parsedDifficulty =
                 (Difficulties) Enum.Parse(typeof(Difficulties), DifficultyToggle.CurrentText.text, true);
             // TODO: Change the actual game's difficulty
-            Debug.Log("Difficulty changed to: " + difficulty);
+            Debug.Log("Difficulty changed to: " + parsedDifficulty);
         }
         catch (Exception e)
         {
