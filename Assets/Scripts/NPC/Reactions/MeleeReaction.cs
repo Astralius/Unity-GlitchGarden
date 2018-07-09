@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class BasicReaction : BaseReactionBehaviour
+public class MeleeReaction : BaseReactionBehaviour
 {
     public override void React(GameObject source)
     {

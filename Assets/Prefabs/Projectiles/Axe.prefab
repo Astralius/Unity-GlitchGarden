@@ -20,9 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4198258615615816}
   - component: {fileID: 212629674776368642}
+  - component: {fileID: 58483024084187592}
+  - component: {fileID: 50006448372100576}
+  - component: {fileID: 114508547600992922}
   - component: {fileID: 114596397642786068}
   - component: {fileID: 114757845553515258}
-  - component: {fileID: 58483024084187592}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Untagged
@@ -43,6 +45,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50006448372100576
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1522889776199494}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58483024084187592
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -58,6 +80,18 @@ CircleCollider2D:
   m_Offset: {x: 0.17, y: 0.08427115}
   serializedVersion: 2
   m_Radius: 0.18170615
+--- !u!114 &114508547600992922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1522889776199494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f02fbf1a29b7440806b835dc40a8d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 3
 --- !u!114 &114596397642786068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18509552536655b4d86107927c032ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: {x: 7, y: 0, z: 0}
+  MovementSpeed: {x: 4, y: 0, z: 0}
 --- !u!114 &114757845553515258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed514df916165046af14c22a2f24d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: {x: 0, y: 0, z: -720}
+  RotationSpeed: {x: 0, y: 0, z: -430}
 --- !u!212 &212629674776368642
 SpriteRenderer:
   m_ObjectHideFlags: 1

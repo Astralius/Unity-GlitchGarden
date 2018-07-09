@@ -46,7 +46,6 @@ public class Attacker : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Trigger exit!");
         if (collision.GetComponent<Defender>())
         {
             currentTarget = null;
@@ -79,7 +78,7 @@ public class Attacker : MonoBehaviour
     {
         if (currentTarget != null)
         {
-            currentTarget.Damage(Damage);
+            currentTarget.DealDamage(Damage);
         }
         else
         {
@@ -87,5 +86,5 @@ public class Attacker : MonoBehaviour
                              typeof(HealthController) + 
                              "in target! Damage will not be dealt!");
         }
-    }    
+    }
 }

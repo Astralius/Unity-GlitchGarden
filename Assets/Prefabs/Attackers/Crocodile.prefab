@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 95873214085325838}
   - component: {fileID: 50707108247664046}
   - component: {fileID: 61822177482278318}
+  - component: {fileID: 114533633563111756}
   - component: {fileID: 114237244234386346}
   - component: {fileID: 114935211474727718}
-  - component: {fileID: 114533633563111756}
   m_Layer: 0
   m_Name: Crocodile
   m_TagString: Untagged

@@ -38,9 +38,9 @@ GameObject:
   - component: {fileID: 95680949790614858}
   - component: {fileID: 50124690653868042}
   - component: {fileID: 61483577595640610}
+  - component: {fileID: 114966782030214502}
   - component: {fileID: 114420744858942496}
   - component: {fileID: 114855424315951518}
-  - component: {fileID: 114966782030214502}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged

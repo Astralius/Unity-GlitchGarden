@@ -12,7 +12,7 @@ public class BlockerReaction : BaseReactionBehaviour
         if (animator != null)
         {
             var colliderBehaviour = source.GetComponent<BaseReactionBehaviour>();
-            if (colliderBehaviour is BasicReaction)
+            if (colliderBehaviour is MeleeReaction)
             {
                 animator.SetBool(IsUnderAttackParameter, true);
             }

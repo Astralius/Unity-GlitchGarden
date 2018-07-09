@@ -17,10 +17,9 @@ public class HealthController : MonoBehaviour
         reaction = GetComponent<BaseReactionBehaviour>();
     }
 
-    public void Damage(float damagePoints)
+    public void DealDamage(float damagePoints)
     {
         CurrentHealth -= damagePoints;
-        Debug.Log(gameObject + " stroke for " + damagePoints + " hit points!");
         if (CurrentHealth <= 0f)
         {
             if (reaction != null)

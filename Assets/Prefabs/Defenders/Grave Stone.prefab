@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4117409521072734}
   - component: {fileID: 95856038818115124}
   - component: {fileID: 61127430033052606}
+  - component: {fileID: 114623227918764280}
   - component: {fileID: 114794313594394180}
   - component: {fileID: 114596794583235864}
-  - component: {fileID: 114623227918764280}
   m_Layer: 0
   m_Name: Grave Stone
   m_TagString: Untagged
