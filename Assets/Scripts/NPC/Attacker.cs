@@ -7,6 +7,9 @@ public class Attacker : MonoBehaviour
     public float WalkSpeed;
     [Range(1f, 10f)]
     public float Damage;
+    [Tooltip("Average number of seconds between appearances")]
+    public float SpawnInterval;
+
 
     private float currentSpeed;
     private HealthController currentTarget;

@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WalkSpeed: 0.4
   Damage: 1
+  SpawnInterval: 8
 --- !u!114 &114855424315951518
 MonoBehaviour:
   m_ObjectHideFlags: 1
