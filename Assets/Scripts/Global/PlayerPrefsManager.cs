@@ -49,18 +49,18 @@ public class PlayerPrefsManager : MonoBehaviour
         }
     }
 
-    public static Difficulties Difficulty
+    public static Difficulty Difficulty
     {
         get
         {
-            Difficulties result;
+            Difficulty result;
             try
             {
-                result = (Difficulties) Enum.Parse(typeof(Difficulties), difficulty.Value);
+                result = (Difficulty) Enum.Parse(typeof(Difficulty), difficulty.Value);
             }
             catch (Exception)
             {
-                result = Difficulties.Normal;
+                result = Difficulty.Normal;
             }
             return result;
         }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class JumperReaction : BaseReactionBehaviour
+public class JumperReaction : AttackReaction
 {
     protected const string JumpParameter = "Jump";
 

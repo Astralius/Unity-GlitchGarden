@@ -28,7 +28,7 @@ public class OptionsController : MonoBehaviour
         try
         {
             var parsedDifficulty =
-                (Difficulties) Enum.Parse(typeof(Difficulties), DifficultyToggle.CurrentText.text, true);
+                (Difficulty) Enum.Parse(typeof(Difficulty), DifficultyToggle.CurrentText.text, true);
             // TODO: Change the actual game's difficulty
             Debug.Log("Difficulty changed to: " + parsedDifficulty);
         }
@@ -41,13 +41,13 @@ public class OptionsController : MonoBehaviour
     public void SetDefaults()
     {
         VolumeSlider.value = MediumVolume;
-        DifficultyToggle.TryChangeText(Difficulties.Normal.ToString());
+        DifficultyToggle.TryChangeText(Difficulty.Normal.ToString());
     }
 
     public void SaveAndExit()
     {
         PlayerPrefsManager.MasterVolume = VolumeSlider.value;
-        PlayerPrefsManager.Difficulty = (Difficulties) Enum.Parse(typeof(Difficulties), DifficultyToggle.CurrentText.text, true);
+        PlayerPrefsManager.Difficulty = (Difficulty) Enum.Parse(typeof(Difficulty), DifficultyToggle.CurrentText.text, true);
     }
 
     private void Start()

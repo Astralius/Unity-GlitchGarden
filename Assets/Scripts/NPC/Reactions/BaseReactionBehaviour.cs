@@ -3,7 +3,6 @@
 [DisallowMultipleComponent]
 public abstract class BaseReactionBehaviour : MonoBehaviour
 {
-    protected const string IsAttackingParameter = "IsAttacking";
     protected Animator animator;
 
     private const string DisappearParameter = "Disappear";
