@@ -6,6 +6,7 @@ public class DefendersSpawner : MonoBehaviour, IPointerClickHandler
     public ConstructionPane ConstructionPane;
 
     private const string defendersParentName = "Defenders";
+    private ResourcesController resourcesController;
     private GameObject defendersParent;
     
     public void Start()
@@ -15,16 +16,33 @@ public class DefendersSpawner : MonoBehaviour, IPointerClickHandler
         {
             defendersParent = new GameObject(defendersParentName);
         }
+
+        resourcesController = FindObjectOfType<ResourcesController>();
+        if (resourcesController == null)
+        {
+            Debug.LogError("There seems to be no Resources Controller in the scene!");
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        var selectedDefender = ConstructionPane.SelectedDefenderPrefab;
-        if (selectedDefender)
+        var selectedPrefab = ConstructionPane.SelectedDefenderPrefab;      
+        if (selectedPrefab != null)
         {
-            var spawnPosition = SnapToGrid(GetWorldPosition(eventData.position));
-            var spawn = Instantiate(selectedDefender, spawnPosition, Quaternion.identity);
-            spawn.transform.parent = defendersParent.transform;
+            var selectedDefender = selectedPrefab.GetComponent<Defender>();
+            if (selectedDefender != null)
+            {
+                if (resourcesController.Light.Use(selectedDefender.LightCost))
+                {
+                    var spawnPosition = SnapToGrid(GetWorldPosition(eventData.position));
+                    var spawn = Instantiate(selectedDefender, spawnPosition, Quaternion.identity);
+                    spawn.transform.parent = defendersParent.transform;
+                }
+                else
+                {
+                    Debug.Log("Insufficient stars!");
+                }
+            }           
         }
     }
 
