@@ -38,12 +38,12 @@ GameObject:
   - component: {fileID: 95680949790614858}
   - component: {fileID: 50124690653868042}
   - component: {fileID: 61483577595640610}
-  - component: {fileID: 114966782030214502}
   - component: {fileID: 114420744858942496}
+  - component: {fileID: 114935664657311018}
   - component: {fileID: 114855424315951518}
   m_Layer: 0
   m_Name: Fox
-  m_TagString: Untagged
+  m_TagString: DestroyOnWin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WalkSpeed: 0.4
   Damage: 1
-  SpawnInterval: 8
+  SpawnInterval: 7
 --- !u!114 &114855424315951518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c9db7055af8ca4e902b28652ffe7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114966782030214502
+--- !u!114 &114935664657311018
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1354376910628090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a8c2ef22c8aa84db2eae8d1c9f382b, type: 3}
+  m_Script: {fileID: 11500000, guid: e31e8a03a37c78045bc6793b177b5226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   StartingHealth: 10
