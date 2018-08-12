@@ -210,7 +210,8 @@ MonoBehaviour:
   - {fileID: 114319157270017282}
   - {fileID: 114460553311667558}
   - {fileID: 114318295865130226}
-  AttackersToSpawn: 50
+  AttackersToSpawn: 20
+  InitialDelay: 10
 --- !u!114 &114318295865130226
 MonoBehaviour:
   m_ObjectHideFlags: 1
