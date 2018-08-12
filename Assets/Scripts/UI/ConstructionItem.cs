@@ -3,17 +3,33 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+#pragma warning disable 649
 
 public class ConstructionItem : MonoBehaviour, IPointerDownHandler
 {
-    public Defender DefenderPrefab;  
-
-    [SerializeField] 
-#pragma warning disable 649
+    public Defender DefenderPrefab;
+   
+    [SerializeField]
     private Image defenderImage;
-#pragma warning restore 649
+    [SerializeField]
+    private Text lightCostText;
 
     public DefenderSelectedEvent DefenderSelected;
+
+    private void Start()
+    {
+        if (lightCostText)
+        {
+            lightCostText.text = DefenderPrefab.LightCost.ToString();
+        }
+        else
+        {
+            throw new MissingReferenceException(
+                "Missing Light Cost Text reference for construction button: " + 
+                DefenderPrefab.name);
+        }
+        
+    }
 
     public void Enable()
     {
@@ -22,7 +38,7 @@ public class ConstructionItem : MonoBehaviour, IPointerDownHandler
 
     public void Disable()
     {
-        defenderImage.color = Color.black;
+        defenderImage.color = Color.gray;
     }
 
     [Serializable]

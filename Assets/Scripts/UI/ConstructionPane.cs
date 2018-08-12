@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ConstructionPane : MonoBehaviour
 {
-    private readonly List<ConstructionItem> availableDefenders = new List<ConstructionItem>();
+    private readonly List<ConstructionItem> buttons = new List<ConstructionItem>();
     private Defender selectedDefender;
 
     public GameObject SelectedDefenderPrefab
@@ -34,15 +34,15 @@ public class ConstructionPane : MonoBehaviour
 
     public void UpdateSelection(ConstructionItem selectedItem)
     {
-        if (!availableDefenders.Contains(selectedItem))
-        {
-            availableDefenders.Add(selectedItem);
-        }
-
-        availableDefenders.ForEach(defender => defender.Disable());
+        buttons.ForEach(button => button.Disable());
 
         if (selectedItem != null)
         {
+            if (!buttons.Contains(selectedItem))
+            {
+                buttons.Add(selectedItem);
+            }
+
             if (selectedDefender == selectedItem.DefenderPrefab)
             {
                 selectedItem.Disable();
@@ -52,11 +52,16 @@ public class ConstructionPane : MonoBehaviour
             {
                 selectedItem.Enable();
                 selectedDefender = selectedItem.DefenderPrefab;
-            }          
+            }
         }
         else
         {
-            Debug.LogWarning("Calling UpdateSelection with null has no effect!");
+            selectedDefender = null;
         }
+    }
+
+    public void DeselectEverything()
+    {
+        UpdateSelection(null);
     }
 }
