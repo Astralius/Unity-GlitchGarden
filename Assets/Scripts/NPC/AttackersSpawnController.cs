@@ -1,10 +1,27 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AttackersSpawnController : MonoBehaviour
 {
     public Attacker[] PossibleAttackers;
     public Spawner[] Spawners = new Spawner[5];
     public int AttackersToSpawn;
+
+    [Tooltip("Initial delay (in seconds) before the spawning starts.")]
+    public float InitialDelay = 0f;
+
+    private CountdownPane countdownPane;
+
+    private void Start()
+    {
+        countdownPane = FindObjectOfType<CountdownPane>();
+        if (countdownPane == null)
+        {
+            throw new NullReferenceException("Could not find CountdownPane in the scene!");
+        }
+        countdownPane.Initialize(AttackersToSpawn);
+    }
 
     private void Update()
     {
@@ -24,14 +41,19 @@ public class AttackersSpawnController : MonoBehaviour
 
     private bool isTimeToSpawn(Attacker attacker)
     {
-        var spawnsPerSecond = 1 / attacker.SpawnInterval;
-
-        if (Time.deltaTime > attacker.SpawnInterval)
+        var result = false;
+        if (Time.timeSinceLevelLoad > InitialDelay)
         {
-            Debug.LogWarning("Spawn rate capped by frame rate");
-        }
+            var spawnsPerSecond = 1 / attacker.SpawnInterval;
 
-        var threshold = spawnsPerSecond * Time.deltaTime;
-        return Random.value < threshold;
+            if (Time.deltaTime > attacker.SpawnInterval)
+            {
+                Debug.LogWarning("Spawn rate capped by frame rate");
+            }
+
+            var threshold = spawnsPerSecond * Time.deltaTime;
+            result = Random.value < threshold;
+        }
+        return result;
     }
 }

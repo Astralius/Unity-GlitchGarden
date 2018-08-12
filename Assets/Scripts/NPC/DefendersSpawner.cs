@@ -33,15 +33,16 @@ public class DefendersSpawner : MonoBehaviour, IPointerClickHandler
             if (selectedDefender != null)
             {
                 if (resourcesController.Light.Use(selectedDefender.LightCost))
-                {
+                {                    
                     var spawnPosition = SnapToGrid(GetWorldPosition(eventData.position));
                     var spawn = Instantiate(selectedDefender, spawnPosition, Quaternion.identity);
-                    spawn.transform.parent = defendersParent.transform;
+                    spawn.transform.parent = defendersParent.transform;                   
                 }
                 else
                 {
                     Debug.Log("Insufficient stars!");
                 }
+                ConstructionPane.DeselectEverything();
             }           
         }
     }

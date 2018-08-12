@@ -11,6 +11,7 @@ public class Gun : MonoBehaviour
 
     public void FireProjectile(Projectile projectile)
     {
-        Instantiate(projectile.gameObject, transform.position, transform.rotation);
+        var spawn = Instantiate(projectile.gameObject, transform.position, transform.rotation);
+        spawn.hideFlags = HideFlags.HideInHierarchy;
     }
 }

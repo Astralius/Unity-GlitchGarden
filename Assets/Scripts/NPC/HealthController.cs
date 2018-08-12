@@ -11,7 +11,7 @@ public class HealthController : MonoBehaviour
 
     private BaseReactionBehaviour reaction;
 
-    private void Start()
+    protected virtual void Start()
     {
         CurrentHealth = StartingHealth;
         reaction = GetComponent<BaseReactionBehaviour>();
@@ -35,7 +35,7 @@ public class HealthController : MonoBehaviour
         }
     }
 
-    public void Destroy()
+    public virtual void Destroy()
     {
         Destroy(this.gameObject);
     }

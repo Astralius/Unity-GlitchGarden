@@ -40,6 +40,7 @@ public class ResourceObject : MonoBehaviour
                 case ResourceType.Light:
                     resourcesController.Light.Add(Amount);
                     break;
+                //TODO: Add more resources here
             }
 
             Destroy(this.gameObject);

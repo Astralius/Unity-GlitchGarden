@@ -4,11 +4,6 @@ public class Projectile : MonoBehaviour
 {
     public float Damage;
 
-    private void Start()
-    {
-        hideFlags = HideFlags.HideInHierarchy;
-    }
-
     private void OnBecameInvisible()
     {
         Destroy(this.gameObject);

@@ -10,7 +10,6 @@ public class Attacker : MonoBehaviour
     [Tooltip("Average number of seconds between appearances")]
     public float SpawnInterval;
 
-
     private float currentSpeed;
     private HealthController currentTarget;
     private BaseReactionBehaviour reaction;
@@ -20,6 +19,7 @@ public class Attacker : MonoBehaviour
     {
         transform = GetComponent<Transform>();
         reaction = GetComponent<BaseReactionBehaviour>();
+
         currentSpeed = WalkSpeed;
     }
 
@@ -82,6 +82,11 @@ public class Attacker : MonoBehaviour
         if (currentTarget != null)
         {
             currentTarget.DealDamage(Damage);
+            var blocker = currentTarget.GetComponent<BlockerReaction>();
+            if (blocker)
+            {
+                blocker.React(this.gameObject);
+            }
         }
         else
         {

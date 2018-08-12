@@ -2,7 +2,7 @@
 
 public class BlockerReaction : BaseReactionBehaviour
 {
-    protected const string IsUnderAttackParameter = "IsUnderAttack";
+    protected const string ReactToAttackParameter = "React to attack";
 
     [Range(1, 3)]
     public int Size = 1;
@@ -14,7 +14,7 @@ public class BlockerReaction : BaseReactionBehaviour
             var colliderBehaviour = source.GetComponent<BaseReactionBehaviour>();
             if (colliderBehaviour is AttackReaction)
             {
-                animator.SetBool(IsUnderAttackParameter, true);
+                animator.SetBool(ReactToAttackParameter, true);
             }
         }
     }
@@ -23,7 +23,7 @@ public class BlockerReaction : BaseReactionBehaviour
     {
         if (animator != null)
         {
-            animator.SetBool(IsUnderAttackParameter, true);
+            animator.SetBool(ReactToAttackParameter, true);
         }
     }
 }
